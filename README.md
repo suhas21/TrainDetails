@@ -1,6 +1,7 @@
 # TrainDetails
 Train Details is an Android Application which is used to get train details based on a given train number.
 To implement this we need to follow some of the steps
+
 STEP 1:
 To get train details we must need a API.The API I used in this application is RAILWAYAPI,to know more details about it
 visit  https://railwayapi.com/ 
