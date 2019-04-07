@@ -71,7 +71,7 @@ private void getInformation() {
                  //Write the Required Code here.
                  }
             @Override
-            public void onFailure(Call<List<Hero>> call, Throwable t) {
+            public void onFailure(Call<TrainRoutePOJO> call, Throwable t) {
                 Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();            }
         })
         }
