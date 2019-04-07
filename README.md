@@ -45,7 +45,9 @@ STEP 5:
 Create a New Interface file and make a GET request with Base Url of the Http Request.
 
 public interface ApiInterface {
-    @GET("v2/name-number/train/<name or number>/apikey/<apikey>/")//This Base Url is only for Getting Train Details like Working Days
+
+    @GET("v2/name-number/train/<name or number>/apikey/<apikey>/")
+    //This Base Url is only for Getting Train Details like Working Days
     Call<TrainDetailsPOJO> getDetails();
 }
 <apikey>-->Replace it with your API Key.
@@ -55,10 +57,10 @@ STEP 6:
 In your Main Java Class include this Code
 
 private void getInformation() {
+
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://api.railwayapi.com")
                 .addConverterFactory(GsonConverterFactory.create()).build();
-                //Here we are using the GsonConverterFactory to directly convert json data to object    
         Api api = retrofit.create(ApiInterface.class);
         Call<TrainDetailsPOJO> call = api.getDetails();
         call.enqueue(new Callback<TrainDetailsPOJO>() {
